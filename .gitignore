@@ -1,4 +1,5 @@
 *.pyc
+te/settings.py
 settings/local.py
 settings/staging.py
 settings/production.py
