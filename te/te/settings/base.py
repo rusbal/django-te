@@ -102,7 +102,7 @@ TEMPLATE_DIRS = (
 )
 
 MY_APPS = (
-    # 'django_mailbox',
+    'django_mailbox',
 )
 
 INSTALLED_APPS = (
