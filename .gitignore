@@ -3,3 +3,5 @@ te/settings.py
 settings/local.py
 settings/staging.py
 settings/production.py
+te/.coverage
+te/htmlcov/
