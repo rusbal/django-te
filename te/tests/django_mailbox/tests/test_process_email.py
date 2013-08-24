@@ -3,7 +3,7 @@ import os.path
 import six
 
 from django_mailbox.models import Mailbox, Message
-from django_mailbox.tests.base import EmailMessageTestCase
+from .base import EmailMessageTestCase
 
 
 __all__ = ['TestProcessEmail']

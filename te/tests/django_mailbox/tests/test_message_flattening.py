@@ -1,6 +1,6 @@
 from django_mailbox import models
 from django_mailbox.models import Message
-from django_mailbox.tests.base import EmailMessageTestCase
+from .base import EmailMessageTestCase
 
 
 __all__ = ['TestMessageFlattening']
