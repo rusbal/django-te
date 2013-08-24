@@ -26,6 +26,8 @@ from django_mailbox.transports import Pop3Transport, ImapTransport,\
 from django_mailbox.signals import message_received
 import six
 
+from te.settings.base import MAILBOX_ATTACHMENT_DIRECTORY
+
 
 STRIP_UNALLOWED_MIMETYPES = getattr(
     settings,
@@ -522,7 +524,7 @@ class MessageAttachment(models.Model):
         blank=True,
     )
     headers = models.TextField(null=True, blank=True)
-    document = models.FileField(upload_to='mailbox_attachments/%Y/%m/%d/')
+    document = models.FileField(upload_to=MAILBOX_ATTACHMENT_DIRECTORY+'/%Y/%m/%d/')
 
     def delete(self, *args, **kwargs):
         self.document.delete()
