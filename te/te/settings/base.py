@@ -99,6 +99,7 @@ ROOT_URLCONF = 'te.urls'
 WSGI_APPLICATION = 'te.wsgi.application'
 
 MY_APPS = (
+    'dashboard',
     'django_mailbox',
 )
 
