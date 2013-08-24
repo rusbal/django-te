@@ -144,5 +144,3 @@ LOGGING = {
         },
     }
 }
-
-MAILBOX_ATTACHMENT_DIRECTORY = APP_DATA_DIR + '/mailbox_attachments'
