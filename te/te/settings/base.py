@@ -105,7 +105,7 @@ MY_APPS = (
     'django_mailbox',
 )
 
-INSTALLED_APPS = (
+STANDARD_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -114,7 +114,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'south',
-) + MY_APPS
+    'discover_runner',
+)
+
+INSTALLED_APPS = STANDARD_APPS + MY_APPS
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
