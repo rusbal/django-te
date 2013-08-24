@@ -2,4 +2,4 @@
 directory=app_data/test_coverage_report
 
 [run]
-include=django_mailbox*
+include=django_mailbox*,dashboard*
