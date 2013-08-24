@@ -3,7 +3,7 @@ from unipath import Path
 
 PROJECT_DIR = Path(__file__).ancestor(3)
 MEDIA_ROOT = PROJECT_DIR.child("media")
-STATIC_ROOT = PROJECT_DIR.child("static")
+STATIC_ROOT = PROJECT_DIR + "/te/public/static"
 STATICFILES_DIRS = (
     PROJECT_DIR.child("assets"),
 )
