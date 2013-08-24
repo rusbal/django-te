@@ -1,8 +1,8 @@
 *.pyc
 te/settings_pointer.py
-settings/local.py
-settings/staging.py
-settings/production.py
+te/te/settings/local.py
+te/te/settings/staging.py
+te/te/settings/production.py
 te/.coverage
 te/app_data
 te/te/public
