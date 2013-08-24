@@ -1,4 +1,16 @@
 # Django settings for te project.
+from unipath import Path
+
+PROJECT_DIR = Path(__file__).ancestor(3)
+MEDIA_ROOT = PROJECT_DIR.child("media")
+STATIC_ROOT = PROJECT_DIR.child("static")
+STATICFILES_DIRS = (
+    PROJECT_DIR.child("assets"),
+)
+TEMPLATE_DIRS = (
+    PROJECT_DIR.child("templates"),
+)
+APP_DATA_DIR = 'app_data'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -37,8 +49,7 @@ USE_L10N = True
 USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
+# Example: MEDIA_ROOT = "/var/www/example.com/media/"
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -48,19 +59,11 @@ MEDIA_URL = ''
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+# Example: STATIC_ROOT = "/var/www/example.com/static/"
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
-
-# Additional locations of static files
-STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-)
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -94,12 +97,6 @@ ROOT_URLCONF = 'te.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'te.wsgi.application'
-
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-)
 
 MY_APPS = (
     'django_mailbox',
@@ -147,3 +144,5 @@ LOGGING = {
         },
     }
 }
+
+MAILBOX_ATTACHMENT_DIRECTORY = APP_DATA_DIR + '/mailbox_attachments'

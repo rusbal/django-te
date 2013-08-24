@@ -1,5 +1,5 @@
 *.pyc
-te/settings.py
+te/settings_pointer.py
 settings/local.py
 settings/staging.py
 settings/production.py
