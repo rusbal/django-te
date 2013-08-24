@@ -5,3 +5,4 @@ settings/staging.py
 settings/production.py
 te/.coverage
 te/app_data
+te/te/public
