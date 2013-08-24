@@ -1,9 +1,18 @@
+from django.core.urlresolvers import resolve
+from django.http import HttpRequest
+from django.template.loader import render_to_string
 from django.test import TestCase
+from dashboard.views import home_page
 
 
-class HomepageTest(TestCase):
-    def test_homepage_load(self):
-        """ Test that homepage loads
+class HomePageTest(TestCase):
 
-        """
-        self.assertTrue(True)
+    def test_root_url_resolves_to_home_page_view(self):
+        found = resolve('/')
+        self.assertEqual(found.func, home_page)
+
+    def test_home_page_returns_correct_html(self):
+        request = HttpRequest()
+        response = home_page(request)
+        expected_html = render_to_string('index.html')
+        self.assertEqual(response.content.decode(), expected_html)
