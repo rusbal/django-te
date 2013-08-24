@@ -3,3 +3,5 @@
 coverage==3.6
 selenium
 mock
+unittest2
+django_discover_runner
