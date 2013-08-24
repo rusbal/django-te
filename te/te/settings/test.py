@@ -11,6 +11,11 @@ DATABASES = {
     }
 }
 
+TEST_APPS = (
+    'discover_runner',
+)
+INSTALLED_APPS += TEST_APPS
+
 SOUTH_TESTS_MIGRATE = False
 SKIP_SOUTH_TESTS = True
 

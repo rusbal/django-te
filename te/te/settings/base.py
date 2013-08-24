@@ -112,7 +112,6 @@ STANDARD_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'south',
-    'discover_runner',
 )
 
 INSTALLED_APPS = STANDARD_APPS + MY_APPS
