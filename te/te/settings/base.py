@@ -8,11 +8,11 @@ STATICFILES_DIRS = (
     PROJECT_DIR.child("assets"),
 )
 TEMPLATE_DIRS = (
-    PROJECT_DIR.child("templates"),
+    PROJECT_DIR + "/templates/metronic/templates",
+    PROJECT_DIR + "/templates/metronic",
+    PROJECT_DIR + "/templates/base",
 )
 APP_DATA_DIR = 'app_data'
-
-TEMPLATE_THEME = 'metronic'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
