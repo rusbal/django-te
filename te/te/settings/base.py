@@ -12,6 +12,8 @@ TEMPLATE_DIRS = (
 )
 APP_DATA_DIR = 'app_data'
 
+TEMPLATE_THEME = 'metronic'
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
