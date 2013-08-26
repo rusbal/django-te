@@ -9,6 +9,7 @@ STATICFILES_DIRS = (
 )
 TEMPLATE_DIRS = (
     PROJECT_DIR + "/templates/metronic/templates",
+    PROJECT_DIR + "/templates/metronic/includes",
     PROJECT_DIR + "/templates/metronic",
     PROJECT_DIR + "/templates/base",
 )
