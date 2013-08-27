@@ -726,7 +726,7 @@ var Index = function () {
                     // (string | mandatory) the text inside the notification
                     text: 'Metronic is a brand new Responsive Admin Dashboard Template you have always been looking for!',
                     // (string | optional) the image to display on the left
-                    image: './assets/img/avatar1.jpg',
+                    image: '/static/metronic1.4/assets/img/avatar1.jpg',
                     // (bool | optional) if you want it to fade out on its own or just sit there
                     sticky: true,
                     // (int | optional) the time you want it to be alive for before fading out
@@ -751,7 +751,7 @@ var Index = function () {
                     // (string | mandatory) the text inside the notification
                     text: 'Metronic comes with a huge collection of reusable and easy customizable UI components and plugins. Buy Metronic today!',
                     // (string | optional) the image to display on the left
-                    image: './assets/img/avatar1.jpg',
+                    image: '/static/metronic1.4/assets/img/avatar1.jpg',
                     // (bool | optional) if you want it to fade out on its own or just sit there
                     sticky: true,
                     // (int | optional) the time you want it to be alive for before fading out
