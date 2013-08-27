@@ -134,13 +134,17 @@ var App = function () {
     // this function handles responsive layout on screen size resize or mobile device rotate.
   
     var handleSidebarAndContentHeight = function () {
+        var header = $('.header');
         var content = $('.page-content');
         var sidebar = $('.page-sidebar');
         var body = $('body');
         var height;
 
         if (body.hasClass("page-footer-fixed") === true && body.hasClass("page-sidebar-fixed") === false) {
-            var available_height = $(window).height() - $('.footer').height();
+            var available_height = $(window).height() - $('.footer').outerHeight(true);
+            if (body.hasClass("page-header-fixed") === true) {
+                available_height -= $('.header').height();
+            }
             if (content.height() <  available_height) {
                 content.attr('style', 'min-height:' + available_height + 'px !important');
             }
